@@ -1,10 +1,15 @@
 <template>
   <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    >
+    <div class="row justify-center">
+      <div class="col-12 row justify-center">
+        <q-img src="~/assets/logo.png" width="318px"></q-img>
+
+      </div>
+      <div class="col-12 row justify-center" style="margin-top: 10px;">
+        There is no analytics involved on this page. Feel free and safe to use it.
+
+      </div>
+    </div>
   </q-page>
 </template>
 
