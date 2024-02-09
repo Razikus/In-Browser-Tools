@@ -53,6 +53,12 @@ const linksList = [
     caption: '',
     icon: 'school',
     link: '/base64'
+  },
+  {
+    title: 'Offline password generator',
+    caption: '',
+    icon: 'lock',
+    link: '/passwordgen'
   }
 ]
 
