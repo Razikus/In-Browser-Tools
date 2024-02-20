@@ -6,7 +6,7 @@
 
       </div>
       <div class="col-12 row justify-center" style="margin-top: 10px;">
-        There is no analytics involved on this page. Feel free and safe to use it.
+        There is no analytics involved on this application. Feel free and safe to use it. No external server is involved.
 
       </div>
     </div>

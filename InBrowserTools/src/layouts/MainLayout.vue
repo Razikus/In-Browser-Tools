@@ -59,6 +59,12 @@ const linksList = [
     caption: '',
     icon: 'lock',
     link: '/passwordgen'
+  },
+  {
+    title: 'WEBP to JPEG/PNG',
+    caption: '',
+    icon: 'image',
+    link: '/webptojpeg'
   }
 ]
 

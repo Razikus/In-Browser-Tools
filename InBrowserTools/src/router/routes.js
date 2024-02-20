@@ -6,7 +6,8 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/IndexPage.vue') },
       { path: 'base64', component: () => import('pages/Base64Page.vue') },
-      { path: 'passwordgen', component: () => import('pages/PasswordGenPage.vue') }
+      { path: 'passwordgen', component: () => import('pages/PasswordGenPage.vue') },
+      { path: 'webptojpeg', component: () => import('pages/WebpToJPEGPage.vue') }
     ]
   },
 
