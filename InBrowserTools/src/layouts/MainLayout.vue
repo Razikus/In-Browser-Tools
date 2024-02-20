@@ -65,6 +65,12 @@ const linksList = [
     caption: '',
     icon: 'image',
     link: '/webptojpeg'
+  },
+  {
+    title: 'JSON viewer',
+    caption: '',
+    icon: 'code',
+    link: '/json'
   }
 ]
 
