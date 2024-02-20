@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Browser Tools
+          In Browser Tools
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
