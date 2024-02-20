@@ -8,11 +8,11 @@
       ></q-file>
     </div>
     <div class="q-pa-md" v-if="imageUrl">
-      <q-img :src="imageUrl" alt="Preview" />
+      <q-btn color="primary" label="Download JPG" @click="downloadImage"></q-btn>
+      <q-btn color="primary"  label="Download PNG" @click="downloadPNG"></q-btn>
     </div>
     <div class="q-pa-md" v-if="imageUrl">
-      <q-btn label="Download JPG" @click="downloadImage"></q-btn>
-      <q-btn label="Download PNG" @click="downloadPNG"></q-btn>
+      <q-img :src="imageUrl" alt="Preview" />
     </div>
   </q-page>
 </template>
