@@ -80,6 +80,12 @@ const linksList = [
     caption: '',
     icon: 'code',
     link: '/json'
+  },
+  {
+    title: 'UUID Generator',
+    caption: '',
+    icon: 'fa-solid fa-link',
+    link: '/uuid'
   }
 ]
 

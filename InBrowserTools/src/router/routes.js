@@ -8,7 +8,8 @@ const routes = [
       { path: 'base64', component: () => import('pages/Base64Page.vue') },
       { path: 'passwordgen', component: () => import('pages/PasswordGenPage.vue') },
       { path: 'webptojpeg', component: () => import('pages/WebpToJPEGPage.vue') },
-      { path: 'json', component: () => import('pages/JSONViewerPage.vue') }
+      { path: 'json', component: () => import('pages/JSONViewerPage.vue') },
+      { path: 'uuid', component: () => import('pages/UUIDGeneratorPage.vue') }
     ]
   },
 
