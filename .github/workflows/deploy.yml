@@ -33,6 +33,18 @@ jobs:
       - name: Build
         run: |
           cd InBrowserTools && yarn install && yarn global add @quasar/cli && quasar build -m spa
+          
+      
+      - name: Generate SBOM
+        id: sbom_generation
+        uses: codenotary/sbom.sh-create@main
+        with:
+          scan_type: 'grypefs'
+          target: './InBrowserTools' # Assuming you want to scan the entire repository
+
+      - name: Download SBOM and put into diskt
+        run: wget -O InBrowserTools/dist/spa/sbom.json $SBOM_SHARE_URL
+        
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
