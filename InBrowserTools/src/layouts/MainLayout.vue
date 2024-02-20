@@ -2,53 +2,43 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
-          In Browser Tools 
-          
+          In Browser Tools
+
         </q-toolbar-title>
-        <div>By Adam Raźniewski <q-btn href="https://www.linkedin.com/in/razniewski/" size="sm" dense flat icon="fa-brands fa-linkedin-in" /></div>
+        <div>By Adam Raźniewski <q-btn href="https://www.linkedin.com/in/razniewski/" size="sm" dense flat
+            icon="fa-brands fa-linkedin-in" /></div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label
-          header
-        >
+        <q-item-label header>
           Menu
         </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
 
-        <q-item
-          clickable
-          href="https://github.com/Razikus/In-Browser-Tools/issues"
-        >
-          <q-item-section
-            avatar
-          >
+        <q-item clickable href="https://github.com/Razikus/In-Browser-Tools/issues">
+          <q-item-section avatar>
             <q-icon name="send" />
           </q-item-section>
 
           <q-item-section>
             <q-item-label>Request tool</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable href="/sbom.json">
+          <q-item-section avatar>
+            <q-icon name="fa-solid fa-list" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Grab SBOM</q-item-label>
+          <q-item-label  caption>Software Bill of Materials</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -99,13 +89,13 @@ export default defineComponent({
     EssentialLink
   },
 
-  setup () {
+  setup() {
     const leftDrawerOpen = ref(false)
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
+      toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
     }
