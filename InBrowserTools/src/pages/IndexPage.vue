@@ -7,7 +7,9 @@
       </div>
       <div class="col-12 row justify-center" style="margin-top: 10px;">
         There is no analytics involved on this application. Feel free and safe to use it. No external server is involved.
-
+      </div>
+      <div style="font-size:24px">
+        No shitty ads, no privacy concerns, no tracking, no cookies, no bullshit.
       </div>
     </div>
   </q-page>
