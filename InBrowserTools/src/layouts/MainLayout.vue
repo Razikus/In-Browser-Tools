@@ -12,8 +12,10 @@
         />
 
         <q-toolbar-title>
-          In Browser Tools
+          In Browser Tools 
+          
         </q-toolbar-title>
+        <div>By Adam Raźniewski <q-btn href="https://www.linkedin.com/in/razniewski/" size="sm" dense flat icon="fa-brands fa-linkedin-in" /></div>
       </q-toolbar>
     </q-header>
 
