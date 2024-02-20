@@ -39,7 +39,7 @@
 
           <q-item-section>
             <q-item-label>Grab SBOM</q-item-label>
-          <q-item-label  caption>Software Bill of Materials</q-item-label>
+          <q-item-label  caption>Software Bill of Materials - <a href="https://sbom.sh">https://sbom.sh</a></q-item-label>
           </q-item-section>
         </q-item>
 
