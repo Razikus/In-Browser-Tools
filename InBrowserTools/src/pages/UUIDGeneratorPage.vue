@@ -2,15 +2,15 @@
   <q-page padding>
     <div class="q-pa-md">
       <q-select v-model="selectedVersion" emit-value :options="uuidVersions" label="Select UUID version" />
-      <q-btn @click="generateUUID" label="Generate UUID" class="q-ma-md"/>
+      <q-btn color="primary" @click="generateUUID" label="Generate UUID" class="q-ma-md"/>
       <q-input style="font-size: 30px;" v-model="uuid" label="Generated UUID" readonly />
-      <q-btn @click="copyUUID" icon="content_copy" class="q-ml-md" :disable="!uuid">Copy</q-btn>
+      <q-btn color="primary" @click="copyUUID" icon="content_copy" class="q-ml-md" :disable="!uuid">Copy</q-btn>
 
       <div class="q-mt-lg">
         <q-slider v-model="batchSize" :min="1" :max="1000" label="Batch Size" />
-        <q-btn @click="generateBatchUUID" :label="'Generate Batch UUID: ' + batchSize" class="q-ma-md"/>
-        <q-btn @click="copyBatchUUID" icon="content_copy" class="q-ml-md" :disable="batchUUIDs.length === 0">Copy Batch</q-btn>
-        <q-btn @click="copyBatchUUIDAsJSON" icon="content_copy" class="q-ml-md" :disable="batchUUIDs.length === 0">Copy as Json Array</q-btn>
+        <q-btn color="primary" @click="generateBatchUUID" :label="'Generate Batch UUID: ' + batchSize" class="q-ma-md"/>
+        <q-btn color="primary" @click="copyBatchUUID" icon="content_copy" class="q-ml-md" :disable="batchUUIDs.length === 0">Copy Batch</q-btn>
+        <q-btn color="primary" @click="copyBatchUUIDAsJSON" icon="content_copy" class="q-ml-md" :disable="batchUUIDs.length === 0">Copy as Json Array</q-btn>
         <div v-for="(uuid, index) in batchUUIDs" :key="index" class="q-mt-md">{{ uuid }}</div>
       </div>
     </div>
