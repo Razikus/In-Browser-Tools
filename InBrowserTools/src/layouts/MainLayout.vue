@@ -34,6 +34,22 @@
           :key="link.title"
           v-bind="link"
         />
+
+        <q-item
+          clickable
+          href="https://github.com/Razikus/In-Browser-Tools/issues"
+        >
+          <q-item-section
+            avatar
+          >
+            <q-icon name="send" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Request tool</q-item-label>
+          </q-item-section>
+        </q-item>
+
       </q-list>
     </q-drawer>
 
