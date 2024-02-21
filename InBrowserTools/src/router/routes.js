@@ -9,7 +9,8 @@ const routes = [
       { path: 'passwordgen', component: () => import('pages/PasswordGenPage.vue') },
       { path: 'webptojpeg', component: () => import('pages/WebpToJPEGPage.vue') },
       { path: 'json', component: () => import('pages/JSONViewerPage.vue') },
-      { path: 'uuid', component: () => import('pages/UUIDGeneratorPage.vue') }
+      { path: 'uuid', component: () => import('pages/UUIDGeneratorPage.vue') },
+      { path: 'videoconverter', component: () => import('pages/OfflineVideoConverterPage.vue') }
     ]
   },
 

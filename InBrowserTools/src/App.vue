@@ -5,6 +5,8 @@
 <script>
 import { defineComponent } from 'vue'
 
+window.HTMLElement = HTMLElement
+
 export default defineComponent({
   name: 'App'
 })

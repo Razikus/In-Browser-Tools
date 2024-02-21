@@ -86,6 +86,12 @@ const linksList = [
     caption: '',
     icon: 'fa-solid fa-link',
     link: '/uuid'
+  },
+  {
+    title: 'AVI TO MP4',
+    caption: '',
+    icon: 'fa-solid fa-video',
+    link: '/videoconverter'
   }
 ]
 

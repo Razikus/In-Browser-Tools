@@ -57,7 +57,7 @@ module.exports = configure(function (/* ctx */) {
     build: {
       target: {
         browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
-        node: 'node16'
+        node: 'node18'
       },
 
       vueRouterMode: 'hash', // available values: 'hash', 'history'
@@ -76,7 +76,15 @@ module.exports = configure(function (/* ctx */) {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
+      // add optimizeDeps exclude
+      extendViteConf (viteConf) {
+        viteConf.optimizeDeps = {
+          exclude: [
+            '@ffmpeg/ffmpeg', '@ffmpeg/util'
+          ]
+        }
+
+      },
       // viteVuePluginOptions: {},
 
       vitePlugins: [
@@ -96,8 +104,8 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
-      open: true // opens browser window automatically
+      https: true,
+      open: true,
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
