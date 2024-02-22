@@ -21,7 +21,16 @@
 
         <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
 
-        <hr/>
+        <hr />
+        <q-item clickable href="https://github.com/Razikus/In-Browser-Tools">
+          <q-item-section avatar>
+            <q-icon name="fa-brands fa-github" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>GitHub</q-item-label>
+          </q-item-section>
+        </q-item>
         <q-item clickable href="https://github.com/Razikus/In-Browser-Tools/issues">
           <q-item-section avatar>
             <q-icon name="send" />
@@ -39,7 +48,7 @@
 
           <q-item-section>
             <q-item-label>Grab SBOM</q-item-label>
-          <q-item-label  caption>Software Bill of Materials - sbom.sh</q-item-label>
+            <q-item-label caption>Software Bill of Materials - sbom.sh</q-item-label>
           </q-item-section>
         </q-item>
 
