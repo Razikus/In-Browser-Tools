@@ -5,6 +5,7 @@
     </q-input>
     <q-slider v-model="characterLen" :min="5" :max="256" label switch-label-side />
     <q-input v-model="characterLen" type="number"></q-input>
+    <q-toggle v-model="includeSpecialChars" label="Include Special Characters"></q-toggle>
   </q-page>
 </template>
 
@@ -15,6 +16,9 @@ export default {
   watch: {
     characterLen(newVal) {
       this.generatedPassword = this.generatePassword()
+    },
+    includeSpecialChars(newVal) {
+      this.generatedPassword = this.generatePassword()
     }
   },
   mounted() {
@@ -23,7 +27,9 @@ export default {
   methods: {
     generatePassword() {
       let length = this.characterLen
-      let characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh)(*&^%$#@!ijklmnopqrstuvwxyz~!@-#$"
+      let basicChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      let specialChars = ")(*&^%$#@!~!@-#$";
+      let characters = basicChars + (this.includeSpecialChars ? specialChars : "");
       return Array.from(crypto.getRandomValues(new Uint32Array(length)))
         .map((x) => characters[x % characters.length])
         .join('')
@@ -32,7 +38,8 @@ export default {
   setup() {
     return {
       characterLen: ref(64),
-      generatedPassword: ref("")
+      generatedPassword: ref(""),
+      includeSpecialChars: ref(true)
     }
   }
 }
