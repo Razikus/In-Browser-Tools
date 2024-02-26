@@ -1,6 +1,7 @@
 <template>
   <q-page padding>
     <q-file v-model="file" label="Select an image" accept="image/*" />
+    <q-input label="Resolution X * X" v-model="xresolution" type="number"></q-input>
     <div style="max-width: 80%;">
       <canvas ref="canvas" width="300" height="300"></canvas>
     </div>
@@ -25,18 +26,26 @@ export default {
     return {
       file: ref(null),
       cropper: ref(null),
-      croppable: ref(false)
+      croppable: ref(false),
+      xresolution: ref(512)
     }
   },
   watch: {
     file() {
       this.loadFileToCanvas();
+    },
+    xresolution(newResolution) {
+      this.setNewResolution(newResolution)
     }
   },
-  mounted() {
-
-  },
   methods: {
+    async setNewResolution(newResolution) {
+
+      let x = this.cropper.setData({
+        width: Number(newResolution)
+      })
+
+    },
     loadFileToCanvas() {
       var reader = new FileReader();
       reader.onload = (e) => {
