@@ -62,6 +62,7 @@ export default {
             viewMode: 1,
             ready: () => {
               this.croppable = true;
+              this.setNewResolution(this.xresolution)
             },
           });
           this.cropper = cropper;
