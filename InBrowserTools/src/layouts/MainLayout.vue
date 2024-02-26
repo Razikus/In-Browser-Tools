@@ -101,6 +101,13 @@ const linksList = [
     caption: '',
     icon: 'fa-solid fa-video',
     link: '/videoconverter'
+  },
+  {
+    title: 'Round image cropper',
+    caption: '',
+    icon: 'fa-solid fa-circle',
+    link: '/roundimagecropper'
+
   }
 ]
 
