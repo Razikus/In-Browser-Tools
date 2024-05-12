@@ -48,7 +48,6 @@
 
           <q-item-section>
             <q-item-label>Grab SBOM</q-item-label>
-            <q-item-label caption>Software Bill of Materials - sbom.sh</q-item-label>
           </q-item-section>
         </q-item>
 
