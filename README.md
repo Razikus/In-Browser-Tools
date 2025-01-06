@@ -2,7 +2,7 @@
 # In Browser Tools
 
 
-https://ibt.razikus.tech
+https://ibt.razikus.com
 
 
 In Browser Tools is a collection of analytics-free, privacy-concerned tools designed to operate directly within your browser. This project is built for users who value privacy and wish to utilize tools without the need for server-side processing or data transmission. Our tools are completely free to use and open-source, making them ideal for educational purposes, quick utilities, or as part of your privacy-focused toolset.
@@ -23,7 +23,7 @@ All tools are designed to be easy to use, with a focus on privacy and security.
 
 ## Getting Started
 
-To use In Browser Tools, simply visit our [website](https://ibt.razikus.tech) or clone this repository to run the tools locally. Our project is built with Vue.js, ensuring a reactive and seamless user experience.
+To use In Browser Tools, simply visit our [website](https://ibt.razikus.com) or clone this repository to run the tools locally. Our project is built with Vue.js, ensuring a reactive and seamless user experience.
 
 
 ### Developing
